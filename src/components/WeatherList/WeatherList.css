@@ -1,0 +1,15 @@
+.weather-list-wrapper {
+  padding: 2rem 0;
+}
+
+.weather-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.weather-card {
+  border: 1px solid black;
+  padding: 1rem;
+  height: 200px;
+}
