@@ -2,6 +2,10 @@
   padding: 2rem 0;
 }
 
+.weather-list-wrapper h2 {
+  /* font-weight: 500; */
+}
+
 .weather-card-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -10,13 +14,13 @@
 
 .weather-card {
   border: 1px solid black;
-  padding: 1rem 1.5rem;
-  height: 200px;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   cursor: pointer;
   transition: transform 0.3s ease-in;
+  gap: 1rem;
 }
 
 .weather-card:hover {
@@ -39,19 +43,9 @@
 }
 
 .weather-parameters-wrapper {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  /* border: 1px solid black; */
-}
-
-.weather-parameter-div {
-  text-align: center;
-  /* border: 1px solid green; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 14px;
 }
 
 .weather-parameter {
@@ -62,4 +56,11 @@
 .weather-values {
   margin: 0.5rem 0 0 0;
   font-weight: 200;
+}
+
+.overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 256px;
 }

@@ -39,22 +39,26 @@ const WeatherList = () => {
               />
               <h3>{city}</h3>
             </div>
+
             <div className="weather-parameters-wrapper">
               <div className="weather-parameter-div">
                 <p className="weather-parameter">Temperature</p>
                 <p className="weather-values">{data.temperature_celsius} °C</p>
+              </div>
+
+              <div className="weather-parameter-div">
+                <p className="weather-parameter">Condition</p>
+                <p className="weather-values overflow-text">{data.weather}</p>
               </div>
               <div className="weather-parameter-div">
                 <p className="weather-parameter">Feels like</p>
                 <p className="weather-values">{data.feels_like_celsius} °C</p>
               </div>
               <div className="weather-parameter-div">
-                <p className="weather-parameter">Condition</p>
-                <p className="weather-values">{data.weather}</p>
-              </div>
-              <div className="weather-parameter-div">
-                <p className="weather-parameter">Date</p>
-                <p className="weather-values">{data.dt}</p>
+                <p className="weather-parameter">Last Update</p>
+                <p className="weather-values">
+                  {data.date} at {data.time}
+                </p>
               </div>
             </div>
           </div>
