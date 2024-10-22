@@ -10,6 +10,56 @@
 
 .weather-card {
   border: 1px solid black;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+
+.weather-card:hover {
+  transform: translate3d(-8px, -8px, 0);
+}
+
+.weather-card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-card h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.weather-icon {
+  width: 4rem;
+  height: auto;
+}
+
+.weather-parameters-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+.weather-parameter-div {
+  text-align: center;
+  /* border: 1px solid green; */
+}
+
+.weather-parameter {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+.weather-values {
+  margin: 0.5rem 0 0 0;
+  font-weight: 200;
 }
