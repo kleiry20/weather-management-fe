@@ -10,17 +10,17 @@ const Weather = () => {
     setCity(e.target.value); // Update city state on input change
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
-    setError(""); // Reset any previous errors
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault(); // Prevent default form submission
+  //   setError(""); // Reset any previous errors
 
-    try {
-      const response = await axios.get(`http://127.0.0.1:8000/weather/${city}`);
-      setWeatherData(response.data); // Update weather data with response
-    } catch (err) {
-      setError("Error fetching weather data."); // Handle any errors
-    }
-  };
+  //   try {
+  //     const response = await axios.get(`http://127.0.0.1:8000/weather/${city}`);
+  //     setWeatherData(response.data); // Update weather data with response
+  //   } catch (err) {
+  //     setError("Error fetching weather data."); // Handle any errors
+  //   }
+  // };
 
   return (
     <div>
