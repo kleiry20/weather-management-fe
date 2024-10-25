@@ -42,22 +42,22 @@ const WeatherList = () => {
 
   let websocket;
 
-  function connect() {
-    websocket = new WebSocket("ws://localhost:8000/ws");
-    websocket.onopen = function () {
-      console.log("Connection opened");
-    };
-    websocket.onmessage = function (event) {
-      console.log("Received data:", event.data); // Log the incoming data
-      const messages = document.getElementById("messages");
-      const message = document.createElement("li");
-      message.textContent = JSON.stringify(event.data); // Display received data
-      messages.appendChild(message);
-    };
-    websocket.onclose = function () {
-      console.log("Connection closed");
-    };
-  }
+  // function connect() {
+  //   websocket = new WebSocket("ws://localhost:8000/ws");
+  //   websocket.onopen = function () {
+  //     console.log("Connection opened");
+  //   };
+  //   websocket.onmessage = function (event) {
+  //     console.log("Received data:", event.data); // Log the incoming data
+  //     const messages = document.getElementById("messages");
+  //     const message = document.createElement("li");
+  //     message.textContent = JSON.stringify(event.data); // Display received data
+  //     messages.appendChild(message);
+  //   };
+  //   websocket.onclose = function () {
+  //     console.log("Connection closed");
+  //   };
+  // }
 
   return (
     <div className="weather-list-wrapper">
